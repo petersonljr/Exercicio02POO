@@ -47,6 +47,17 @@ public class Medico {
         this.especialidade = especialidade;
     }
 
+    @Override
+    public String toString() {
+        return "Medico{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", crm='" + crm + '\'' +
+                ", especialidade='" + especialidade + '\'' +
+                '}';
+    }
+
+
     public void mostrar() { 
         System.out.println("ID: " + id); 
         System.out.println("Nome: " + nome); 

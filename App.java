@@ -26,5 +26,53 @@ public class App
         m1.mostrar();
         m2.mostrar();
 
+        System.out.println(p1);
+        System.out.println(m2);
+        
+        // Criando uma agenda
+        Agenda agenda = new Agenda();
+        agenda.setData("23/02/2026");
+        agenda.setHora("14:00");
+        agenda.setMedico("Dr. Silva");
+        agenda.setPaciente("João");
+        agenda.consultar();
+
+        // Criando uma consulta
+        Consulta consulta = new Consulta();
+        consulta.setData("23/02/2026");
+        consulta.setHora("14:00");
+        consulta.setMedico("Dr. Silva");
+        consulta.setPaciente("João");
+        consulta.setMotivo("Dor de cabeça");
+        consulta.setHistorico("Paciente já apresentou sintomas semelhantes.");
+        consulta.marcar();
+        consulta.consultar();
+
+        // Criando uma receita vinculada à consulta
+        Receita receita = new Receita();
+        receita.setConsulta(consulta);
+        receita.setData("23/02/2026");
+        receita.setDescritivo("Dipirona 500mg - tomar 1 comprimido a cada 8h.");
+        receita.prescrever();
+        receita.consultar();
+
+        // Criando um exame vinculado à consulta
+        Exame exame = new Exame();
+        exame.setConsulta(consulta);
+        exame.setData("24/02/2026");
+        exame.setDescritivo("Exame de sangue completo.");
+        exame.solicitar();
+        exame.consultar();
+
+        // Criando um recepcionista
+        Recepcionista recepcionista = new Recepcionista();
+        recepcionista.setNome("Maria");
+        recepcionista.setCpf("123.456.789-00");
+        recepcionista.setTelefone("(11) 99999-8888");
+        recepcionista.setSenha("senhaSegura123");
+        recepcionista.acessar();
+    
+
+
     }
 }

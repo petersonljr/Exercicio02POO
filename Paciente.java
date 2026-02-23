@@ -56,6 +56,18 @@ public class Paciente {
         this.peso = peso;
     }
 
+    @Override
+    public String toString() {
+        return "Paciente{" +
+                "nome='" + nome + '\'' +
+                ", idade=" + idade +
+                ", endereco='" + endereco + '\'' +
+                ", altura=" + altura +
+                ", peso=" + peso +
+                '}';
+    }
+
+
     public void mostrar() { System.out.println("Nome: " + nome); 
         System.out.println("Idade: " + idade);
         System.out.println("Endereço: " + endereco);
